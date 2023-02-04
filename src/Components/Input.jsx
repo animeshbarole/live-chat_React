@@ -23,6 +23,7 @@ const Input = () => {
   //ChatContext is because we are going to need another user 
   const {data}  = useContext(ChatContext)
 
+  
   const handleSend = async () =>{
       
 /* Checking if img present or text then we send according to it  */
@@ -103,6 +104,9 @@ const Input = () => {
       setText("") /*After sending the text and the image we going to delete it  */
       setImg(null)
   };
+  const handleKey = (event) =>{
+    event.code ==="Enter" && handleSend();  //When event is equal to Enter then we just search for the user
+  };
 
   return (
     <div className='input'>
@@ -121,7 +125,7 @@ const Input = () => {
         <label htmlFor="file">
           <img src={addfile} alt="" />
         </label>
-        <button onClick={handleSend}>Send</button>
+        <button onClick={handleKey} >Send</button>
       </div>
     </div>
   )
