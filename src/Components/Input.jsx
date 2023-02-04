@@ -104,9 +104,7 @@ const Input = () => {
       setText("") /*After sending the text and the image we going to delete it  */
       setImg(null)
   };
-  const handleKey = (event) =>{
-    event.code ==="Enter" && handleSend();  //When event is equal to Enter then we just search for the user
-  };
+
 
   return (
     <div className='input'>
@@ -125,7 +123,7 @@ const Input = () => {
         <label htmlFor="file">
           <img src={addfile} alt="" />
         </label>
-        <button onClick={handleKey} >Send</button>
+        <button onClick={handleSend} >Send</button>
       </div>
     </div>
   )
