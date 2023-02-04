@@ -90,7 +90,7 @@ import { useNavigate,Link } from 'react-router-dom';
                 <input style={{display:"none"}} type="file" id ="file"  />
                 <label  htmlFor="file">
                     <img src={Add} alt="" />
-                    <span >Add an Avatar</span>
+                    <span >Add Your Profile Photo</span>
                 </label> 
                 <button>Sign Up</button>
                 {error && <span>Something Went Wrong</span>}      {/* if Error Occured we used this statement to identify it*/ }
